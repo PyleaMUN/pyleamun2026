@@ -12,23 +12,25 @@
     body { font-family: 'Roboto', sans-serif; }
     .hero {
       background: url('pyleaMUNfinallogo.png') center/cover no-repeat;
-      color: white;
       height: 100vh;
       display: flex;
       align-items: center;
+      justify-content: center;
       position: relative;
+      text-align: center;
     }
     .hero-overlay {
-      background-color: rgba(173, 216, 230, 0.2); /* very pale light blue */
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      background-color: rgba(173, 216, 230, 0.2);
+      width: 100%; height: 100%; position: absolute; top: 0; left: 0;
     }
     .hero-content {
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1; max-width: 80%; color: #001f3f;
+    }
+    .hero-content h1, .hero-content p {
+      text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+    }
+    .hero-content img.logo-large {
+      max-width: 400px; margin-top: 2rem;
     }
     .section-title { margin: 4rem 0 2rem; text-align: center; }
     .committee-card { transition: transform .3s; }
@@ -61,12 +63,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero d-flex text-center text-white">
+  <header class="hero d-flex">
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
+    <div class="hero-content">
       <h1 class="display-4">Welcome to PyleaMUN 2026</h1>
       <p class="lead">Join us for a dynamic Model United Nations experience</p>
       <a href="#register" class="btn btn-primary btn-lg">Register Now</a>
+      <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo Large" class="logo-large">
     </div>
   </header>
 
