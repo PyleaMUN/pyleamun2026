@@ -12,7 +12,10 @@
     body { font-family: 'Roboto', sans-serif; margin: 0; }
     .navbar-custom { background-color: #f8f8f0; }
     .hero {
-      background: url('pyleaMUNfinallogo.png') center/cover no-repeat;
+      background-image: url('pyleaMUNfinallogo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -36,7 +39,6 @@
     .committee-card:hover { transform: translateY(-5px); }
     footer { background: #222; color: #aaa; padding: 2rem 0; }
     footer a { color: #aaa; text-decoration: none; }
-    .navbar-brand img { height: 40px; }
   </style>
 </head>
 <body>
@@ -44,7 +46,7 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2">
+        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;">
         PyleaMUN
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
