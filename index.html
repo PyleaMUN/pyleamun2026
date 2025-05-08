@@ -12,24 +12,30 @@
     body { font-family: 'Roboto', sans-serif; }
     .navbar-custom { background-color: #f8f8f0; }
     .hero {
-      background: url('pyleaMUNfinallogo.png') top center/cover no-repeat;
-      height: 100vh;
+      background-image: url('pyleaMUNfinallogo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       text-align: center;
       margin-top: 56px; /* Push below navbar */
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
     .hero-overlay {
-      background-color: rgba(173, 216, 230, 0.2);
-      width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+      display: none; /* Remove overlay to see full image colors */
     }
     .hero-content {
       position: relative; z-index: 1; max-width: 80%; color: #001f3f;
+      background: rgba(248,248,240,0.8); /* Semi-opaque light background for text readability */
+      padding: 2rem;
+      border-radius: 0.5rem;
     }
     .hero-content h1, .hero-content p {
-      text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+      text-shadow: none;
     }
     .section-title { margin: 4rem 0 2rem; text-align: center; }
     .committee-card { transition: transform .3s; }
@@ -50,7 +56,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navMenu">
+      <div class="collapse navbar-collapse" id="#navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#committees">Committees</a></li>
@@ -62,8 +68,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero d-flex">
-    <div class="hero-overlay"></div>
+  <header class="hero">
     <div class="hero-content">
       <h1 class="display-4">Welcome to PyleaMUN 2026</h1>
       <p class="lead">Join us for a dynamic Model United Nations experience</p>
