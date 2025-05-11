@@ -9,10 +9,8 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Page background matches hero overlay color */
     body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #f8f8f0; }
     .navbar-custom { background-color: #f8f8f0; }
-
     .hero {
       background-image: url('pyleaMUNfinallogo.png');
       background-repeat: no-repeat;
@@ -29,46 +27,22 @@
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(248, 248, 240, 0.6); /* 60% opacity overlay (40% fade) */
+      inset: 0;
+      background-color: rgba(248, 248, 240, 0.6);
     }
-    .hero-content {
-      position: relative; z-index: 1; max-width: 70%; color: #001f3f;
-      padding: 2rem;
-    }
-    .hero-content h1 { text-shadow: 2px 2px 4px rgba(255,255,255,0.7); }
-    .hero-content .date-highlight {
-      display: inline-block;
-      color: #001f3f;
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding: 0.2em 0.5em;
-      border-radius: 0.3em;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-    .section-title { margin: 4rem 0 2rem; text-align: center; color: #001f3f; }
-    .about-text p {
-      text-align: justify;
-      font-style: italic;
-      line-height: 1.6;
-    }
-    .committee-card { transition: transform .3s; cursor: pointer; }
-    .committee-card:hover { transform: translateY(-5px); }
-    /* Royal blue for committee titles */
-    .card-title { color: royalblue; font-weight: 600; }
-    /* Modal button styling */
-    .modal-footer .btn-primary {
-      color: #001f3f;
-      background-color: #fff;
-      border-color: #001f3f;
-    }
-    .modal-footer .btn-primary:hover { background-color: #e6e6e6; }
-    footer { background: #222; color: #aaa; padding: 2rem 0; }
-    footer a { color: #aaa; text-decoration: none; }
+    .hero-content { position: relative; z-index:1; max-width:70%; color:#001f3f; padding:2rem; }
+    .hero-content h1 { text-shadow:2px 2px 4px rgba(255,255,255,0.7); }
+    .hero-content .date-highlight { display:inline-block; color:#001f3f; font-size:1.5rem; font-weight:700; padding:0.2em 0.5em; border-radius:0.3em; font-style:italic; margin-bottom:1rem; }
+    .section-title { margin:4rem 0 2rem; text-align:center; color:#001f3f; }
+    .engraved { text-shadow:1px 1px 0 #aaa, -1px -1px 0 #fff; }
+    .about-text p { text-align:justify; font-style:italic; line-height:1.6; }
+    .committee-card { transition:transform .3s; cursor:pointer; }
+    .committee-card:hover { transform:translateY(-5px); }
+    .card-title { color:royalblue; font-weight:600; }
+    .modal-footer .btn-primary { color:#001f3f; background-color:#fff; border-color:#001f3f; }
+    .modal-footer .btn-primary:hover { background-color:#e6e6e6; }
+    footer { background:#222; color:#aaa; padding:2rem 0; }
+    footer a { color:#aaa; text-decoration:none; }
   </style>
 </head>
 <body>
@@ -76,7 +50,7 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;">
+        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;" onerror="this.style.display='none'">
         PyleaMUN
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -100,7 +74,7 @@
   <header class="hero">
     <div class="hero-content">
       <h1 class="display-4">Welcome to PyleaMUN 2026</h1>
-      <div class="date-highlight">January 22nd–24th 2026</div><br>
+      <div class="date-highlight">January 22nd &ndash; 24th 2026</div><br>
       <a href="https://pyleamun.github.io/registration2026/" class="btn btn-primary btn-lg mt-3">Register Now</a>
     </div>
   </header>
@@ -110,11 +84,27 @@
     <h2 class="section-title">About PyleaMUN</h2>
     <div class="about-text">
       <p>PyleaMUN proudly inaugurates its very first conference, marking the genesis of what we aspire to cultivate as a venerable tradition within the Model United Nations community both in Greece and across the globe. With unwavering commitment to excellence, this pioneering gathering unites aspiring diplomats, visionaries, and change-makers from every corner of the world beneath one roof.</p>
-      <p>Over the course of this landmark event, participants will engage in rigorous debate on the most urgent challenges of our time—from climate justice and global health to peacekeeping and human rights—honing their analytical acumen and persuasive eloquence in preparation for leadership on the world stage.</p>
+      <p>Over the course of this landmark event, participants will engage in rigorous debate on the most urgent challenges of our time &mdash; from climate justice and global health to peacekeeping and human rights &mdash; honing their analytical acumen and persuasive eloquence in preparation for leadership on the world stage.</p>
       <p>As we stand at the threshold of this momentous occasion, we invoke the spirit of cooperation and mutual respect that lies at the heart of the United Nations itself. Each delegate will have the opportunity to forge lasting bonds with peers, to exchange diverse perspectives, and to cultivate the empathy essential for navigating an ever-more interconnected international landscape.</p>
       <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions, to build consensus among divergent viewpoints, and to embody the highest standards of diplomatic conduct.</p>
-      <p>Looking beyond this inaugural conference, PyleaMUN envisions a legacy of intellectual curiosity, principled leadership, and transformative dialogue that endures year after year. It is our fervent hope that this first assembly will ignite a sustained flame of collaboration within the MUN family—one that illuminates the path for future generations of delegates in Greece and around the world.</p>
+      <p>Looking beyond this inaugural conference, PyleaMUN envisions a legacy of intellectual curiosity, principled leadership, and transformative dialogue that endures year after year. It is our fervent hope that this first assembly will ignite a sustained flame of collaboration within the MUN family &mdash; one that illuminates the path for future generations of delegates in Greece and around the world.</p>
       <p>Together, we embark on a journey not merely of debate, but of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
+    </div>
+  </section>
+
+  <!-- Empowering Tomorrow Section -->
+  <section id="empowering" class="container py-5">
+    <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
+    <div class="mt-4">
+      <p>Thessaloniki &mdash; ancient crossroads of ideas and empires &mdash; beckons the next wave of young diplomats to ignite bold solutions, fuse tradition with technology, and chart a resilient future.</p>
+      <ul class="list-unstyled text-center">
+        <li>🌟 <strong>Why Here?</strong> From the White Tower to the waterfront, history’s lessons fuel your vision.</li>
+        <li>⚡ <strong>Why Now?</strong> As tomorrow’s leaders, you hold the keys to communities, climate and digital frontiers.</li>
+        <li>🎯 <strong>Your Mission:</strong> Unite, debate, draft &mdash; and leave a legacy that generations will follow.</li>
+      </ul>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAgenda">Agenda</button>
     </div>
   </section>
 
@@ -122,18 +112,74 @@
   <section id="committees" class="container py-5">
     <h2 class="section-title">Committees</h2>
     <div class="row g-4">
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalUNEP"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">UN Environment Programme</h5></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalSC"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">Security Council</h5></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalECOSOC"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">Economic and Social Council</h5></div></div></div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">UN Environment Programme</h5>
+            <a href="https://pyleamun.github.io/unep2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Security Council</h5>
+            <a href="https://pyleamun.github.io/security2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Economic and Social Council</h5>
+            <a href="https://pyleamun.github.io/ecosoc2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row g-4 mt-3">
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalNATO"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">NATO</h5></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalWHO"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">World Health Organisation</h5></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalHRC"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">Human Rights Council</h5></div></div></div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">NATO</h5>
+            <a href="https://pyleamun.github.io/nato2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">World Health Organisation</h5>
+            <a href="https://pyleamun.github.io/who2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Human Rights Council</h5>
+            <a href="https://pyleamun.github.io/hrc2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="row g-4 mt-3">
-      <div class="col-md-4 offset-md-2"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalUNWomen"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">UN Women</h5></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100" data-bs-toggle="modal" data-bs-target="#modalGA"><div class="card-body d-flex align-items-center justify-content-center"><h5 class="card-title text-center">General Assembly Plenary</h5></div></div></div>
+      <div class="col-md-4 offset-md-2">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">UN Women</h5>
+            <a href="https://pyleamun.github.io/un-women2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">General Assembly Plenary</h5>
+            <a href="https://pyleamun.github.io/ga2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -152,45 +198,69 @@
     <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
   </section>
 
-  <!-- Committee Modals -->
-  <!-- UNEP -->
-  <div class="modal fade" id="modalUNEP" tabindex="-1" aria-labelledby="labelUNEP" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelUNEP">UN Environment Programme</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/unep2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- Security Council -->
-  <div class="modal fade" id="modalSC" tabindex="-1" aria-labelledby="labelSC" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelSC">Security Council</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/security2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- Economic and Social Council -->
-  <div class="modal fade" id="modalECOSOC" tabindex="-1" aria-labelledby="labelECOSOC" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelECOSOC">Economic and Social Council</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/ecosoc2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- NATO -->
-  <div class="modal fade" id="modalNATO" tabindex="-1" aria-labelledby="labelNATO" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelNATO">NATO</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/nato2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- World Health Organisation -->
-  <div class="modal fade" id="modalWHO" tabindex="-1" aria-labelledby="labelWHO" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelWHO">World Health Organisation</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/who2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- Human Rights Council -->
-  <div class="modal fade" id="modalHRC" tabindex="-1" aria-labelledby="labelHRC" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelHRC">Human Rights Council</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/hrc2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- UN Women -->
-  <div class="modal fade" id="modalUNWomen" tabindex="-1" aria-labelledby="labelUNWomen" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelUNWomen">UN Women</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/unwomen2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
-  </div>
-  <!-- General Assembly Plenary -->
-  <div class="modal fade" id="modalGA" tabindex="-1" aria-labelledby="labelGA" aria-hidden="true">
-    <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="labelGA">General Assembly Plenary</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Topics to be discussed</h6><p class="fst-italic">to be announced...</p></div><div class="modal-footer"><a href="https://pyleamun.github.io/ga2026/" target="_blank" class="btn btn-primary">Learn More</a></div></div></div>
+  <!-- Agenda Modal -->
+  <div class="modal fade" id="modalAgenda" tabindex="-1" aria-labelledby="labelAgenda" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelAgenda">Committee Agendas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ol>
+            <li><strong>UN Environment Programme (UNEP)</strong>
+              <ol>
+                <li>Green Schools Initiative – Integrating Sustainability Education with Everyday Practices. “Green Schools” and new curricula.</li>
+                <li>Balancing Ecotourism and Conservation in UNESCO Heritage Sites – Designing sustainable tourism models that preserve cultural landmarks while fueling local economies.</li>
+              </ol>
+            </li>
+            <li><strong>Security Council</strong>
+              <ol>
+                <li>Cybersecurity Threats and Digital Peacekeeping – Debating the role of social media platforms and youth-facing policies in preventing online radicalization and misinformation.</li>
+                <li>Combatting Illicit Small Arms Trade – Youth Advocacy for Disarmament – Developing international frameworks for awareness campaigns, policy proposals, and community outreach to curb the flow of illegal firearms and light weapons.</li>
+              </ol>
+            </li>
+            <li><strong>Economic and Social Council (ECOSOC)</strong>
+              <ol>
+                <li>Sustainable Entrepreneurship: Youth in the Green Economy – Proposing incentives and capacity-building for student-led start-ups in renewable energy, circular design, and low-carbon tech.</li>
+                <li>Bridging the Digital Divide in Education – Ensuring equitable access to e-learning and digital tools for students in underserved urban and rural areas.</li>
+              </ol>
+            </li>
+            <li><strong>NATO</strong>
+              <ol>
+                <li>Shaping Rules for Space Security: Youth Perspectives on Satellite Governance – Exploring responsible behaviour in Earth’s orbital commons.</li>
+                <li>Countering Hybrid Warfare: Youth Roles – Outlining programs for student volunteers to assist in media literacy and community resilience against disinformation.</li>
+              </ol>
+            </li>
+            <li><strong>World Health Organisation (WHO)</strong>
+              <ol>
+                <li>Adolescent Mental Health: A Global Crisis – Formulating youth-centered strategies for schools and online platforms to provide early support and destigmatize care.</li>
+                <li>Youth Engagement in Pandemic Preparedness – Integrating student ambassadors into public health campaigns and vaccine outreach for future outbreaks.</li>
+              </ol>
+            </li>
+            <li><strong>Human Rights Council (HRC)</strong>
+              <ol>
+                <li>Digital Rights of the Next Generation – Safeguarding privacy, freedom of expression, and protection from online surveillance for minors.</li>
+                <li>Protecting the Rights of Children and Adolescents in Gaza – Crafting resolutions to ensure that youth in Gaza have access to education, healthcare, and protection from violence.</li>
+              </ol>
+            </li>
+            <li><strong>UN Women</strong>
+              <ol>
+                <li>Empowering Young Women in STEM – Addressing cultural and structural barriers to female participation in science, technology, engineering and math.</li>
+                <li>Preventing Gender-Based Violence in Schools and Online – Establishing international guidelines for safe reporting mechanisms and prevention education.</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Registration Section -->
   <section id="register" class="container py-5 text-center">
     <h2 class="section-title">Registration</h2>
     <p>Secure your spot at PyleaMUN 2026 by registering today.</p>
-    <a href="https://pyleamun.github.io/registration2026/" class="btn btn-success btn-lg">Register Here</a>
+    <a href="https://pyleamun.github.io/registration2026/" target="_blank" class="btn btn-success btn-lg">Register Here</a>
   </section>
 
   <!-- Contact Section -->
@@ -212,7 +282,5 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
