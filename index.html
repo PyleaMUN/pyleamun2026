@@ -84,26 +84,22 @@
     <div class="mt-4">
       <p>Thessaloniki &mdash; ancient crossroads of ideas and empires &mdash; beckons the next wave of young diplomats to ignite bold solutions, fuse tradition with technology, and chart a resilient future.</p>
       <ul class="list-unstyled text-center">
-        <li>🌟 <strong>Why Here?</strong> From the White Tower to the waterfront, history’s lessons fuel your vision.</li>
-        <li>⚡ <strong>Why Now?</strong> As tomorrow’s leaders, you hold the keys to communities, climate and digital frontiers.</li>
+        <li>🌟 <strong>Why Here?</strong> From the White Tower to the waterfront, history's lessons fuel your vision.</li>
+        <li>⚡ <strong>Why Now?</strong> As tomorrow's leaders, you hold the keys to communities, climate and digital frontiers.</li>
         <li>🎯 <strong>Your Mission:</strong> Unite, debate, draft &mdash; and leave a legacy that generations will follow.</li>
       </ul>
     </div>
     <div class="text-center mt-4">
       <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAgenda">Agenda</button>
+      <button class="btn btn-primary btn-lg ms-3" data-bs-toggle="modal" data-bs-target="#modalAbout">About PyleaMUN</button>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Section - Now moved to modal -->
   <section id="about" class="container py-5">
-    <h2 class="section-title">About PyleaMUN</h2>
-    <div class="about-text">
-      <p>PyleaMUN is excited to host its very first conference, laying the foundation for what we hope will become a meaningful tradition within the Model United Nations community in Greece and beyond. This initial gathering brings together students and young thinkers who are eager to explore diplomacy, global issues, and the power of collaboration.</p>
-      <p>Throughout the event, participants will engage in thoughtful discussions on pressing challenges — from climate and health to peace and human rights — while developing their critical thinking and public speaking skills in a supportive setting.</p>
-      <p>At its core, PyleaMUN encourages the values of cooperation, respect, and open dialogue — the same values that guide the United Nations. Delegates will have the chance to meet peers from diverse backgrounds, share perspectives, and gain a deeper understanding of global affairs.</p>
-      <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions, to build consensus among divergent viewpoints, and to embody the highest standards of diplomatic conduct.</p>
-      <p>Looking ahead, we hope this conference will inspire continued interest in international issues, respectful dialogue, and student-led initiatives. Our aim is for PyleaMUN to grow into a welcoming space for learning, debate, and collaboration in the years to come.</p>
-      <p>Together, we embark on a journey not merely of debate, but of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
+    <h2 class="section-title">About </h2>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAbout">Learn More About PyleaMUN</button>
     </div>
   </section>
 
@@ -197,6 +193,29 @@
     <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
   </section>
 
+  <!-- About PyleaMUN Modal -->
+  <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="labelAbout" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelAbout">About PyleaMUN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body about-text">
+          <p>PyleaMUN is excited to host its very first conference, laying the foundation for what we hope will become a meaningful tradition within the Model United Nations community in Greece and beyond. This initial gathering brings together students and young thinkers who are eager to explore diplomacy, global issues, and the power of collaboration.</p>
+          <p>Throughout the event, participants will engage in thoughtful discussions on pressing challenges — from climate and health to peace and human rights — while developing their critical thinking and public speaking skills in a supportive setting.</p>
+          <p>At its core, PyleaMUN encourages the values of cooperation, respect, and open dialogue — the same values that guide the United Nations. Delegates will have the chance to meet peers from diverse backgrounds, share perspectives, and gain a deeper understanding of global affairs.</p>
+          <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions, to build consensus among divergent viewpoints, and to embody the highest standards of diplomatic conduct.</p>
+          <p>Looking ahead, we hope this conference will inspire continued interest in international issues, respectful dialogue, and student-led initiatives. Our aim is for PyleaMUN to grow into a welcoming space for learning, debate, and collaboration in the years to come.</p>
+          <p>Together, we embark on a journey not merely of debate, but of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Agenda Modal -->
   <div class="modal fade" id="modalAgenda" tabindex="-1" aria-labelledby="labelAgenda" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -209,7 +228,7 @@
           <ol>
             <li><strong>UN Environment Programme (UNEP)</strong>
               <ol>
-                <li>Green Schools Initiative – Integrating Sustainability Education with Everyday Practices. “Green Schools” and new curricula.</li>
+                <li>Green Schools Initiative – Integrating Sustainability Education with Everyday Practices. "Green Schools" and new curricula.</li>
                 <li>Balancing Ecotourism and Conservation in UNESCO Heritage Sites – Designing sustainable tourism models that preserve cultural landmarks while fueling local economies.</li>
               </ol>
             </li>
@@ -227,7 +246,7 @@
             </li>
             <li><strong>NATO</strong>
               <ol>
-                <li>Shaping Rules for Space Security: Youth Perspectives on Satellite Governance – Exploring responsible behaviour in Earth’s orbital commons.</li>
+                <li>Shaping Rules for Space Security: Youth Perspectives on Satellite Governance – Exploring responsible behaviour in Earth's orbital commons.</li>
                 <li>Countering Hybrid Warfare: Youth Roles – Outlining programs for student volunteers to assist in media literacy and community resilience against disinformation.</li>
               </ol>
             </li>
