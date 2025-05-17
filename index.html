@@ -22,22 +22,39 @@
   <meta name="twitter:description" content="Join the first Model United Nations in Pylea, Thessaloniki. January 22–24, 2026.">
   <meta name="twitter:image" content="https://pyleamun.github.io/pyleaMUNfinallogo.png">
 
-  <!-- Indexing -->
+  <!-- Make sure the site is indexed -->
   <meta name="robots" content="index, follow">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
+  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #f8f8f0; }
     .navbar-custom { background-color: #f8f8f0; }
-    .hero { background-image:url('pyleaMUNfinallogo.png'); background-repeat:no-repeat; background-size:auto 80%; background-position:center; height:100vh; display:flex; align-items:center; justify-content:center; position:relative; text-align:center; margin-top:56px; }
-    .hero::before { content:""; position:absolute; inset:0; background-color:rgba(248,248,240,0.6); }
-    .hero-content { position:relative; z-index:1; max-width:70%; color:#001f3f; padding:2rem; }
+    .hero {
+      background-image: url('pyleaMUNfinallogo.png');
+      background-repeat: no-repeat;
+      background-size: auto 80%;
+      background-position: center center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(248, 248, 240, 0.6);
+    }
+    .hero-content { position: relative; z-index:1; max-width:70%; color:#001f3f; padding:2rem; }
     .hero-content h1 { text-shadow:2px 2px 4px rgba(255,255,255,0.7); }
-    .date-highlight { display:inline-block; color:#001f3f; font-size:1.5rem; font-weight:700; padding:0.2em 0.5em; border-radius:0.3em; font-style:italic; margin-bottom:1rem; }
+    .hero-content .date-highlight { display:inline-block; color:#001f3f; font-size:1.5rem; font-weight:700; padding:0.2em 0.5em; border-radius:0.3em; font-style:italic; margin-bottom:1rem; }
     .section-title { margin:4rem 0 2rem; text-align:center; color:#001f3f; }
     .engraved { text-shadow:1px 1px 0 #aaa, -1px -1px 0 #fff; }
     .about-text p { text-align:justify; font-style:italic; line-height:1.6; }
@@ -48,16 +65,32 @@
     .modal-footer .btn-primary:hover { background-color:#e6e6e6; }
     footer { background:#222; color:#aaa; padding:2rem 0; }
     footer a { color:#aaa; text-decoration:none; }
-    .social-icon { font-size:1.5rem; margin:0 10px; transition:color .3s; }
-    .social-icon:hover { color:#fff; }
-    .fa-facebook:hover { color:#3b5998; }
-    .fa-instagram:hover { color:#e4405f; }
-    .fa-tiktok:hover { color:#69c9d0; }
-    #countdown-section { background:none; border-top:none; border-bottom:none; }
-    #countdown div { min-width:90px; padding:.5em; background:transparent; box-shadow:none; border-radius:0; transition:none; }
-    #countdown div:hover { transform:scale(1.05); }
-    #countdown span { display:block; font-size:2rem; color:#007bff; }
-    #countdown .small { font-size:.9rem; color:#555; }
+    .social-icon {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    .social-icon:hover { color: #fff; }
+    .fa-facebook:hover { color: #3b5998; }
+    .fa-instagram:hover { color: #e4405f; }
+    .fa-tiktok:hover { color: #69c9d0; }
+
+    #countdown-section {
+      background: none;
+      border-top: none;
+      border-bottom: none;
+    }
+    #countdown div {
+      min-width: 90px;
+      padding: 0.5em;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      transition: none;
+    }
+    #countdown div:hover { transform: scale(1.05); }
+    #countdown span { display: block; font-size: 2rem; color: #007bff; }
+    #countdown .small { font-size: 0.9rem; color: #555; }
   </style>
 </head>
 <body>
@@ -65,61 +98,235 @@
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="pyleaMUNfinallogo1.png" alt="Logo" class="me-2" style="height:40px;" onerror="this.style.display='none'">PyleaMUN
+        <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;" onerror="this.style.display='none'">
+        PyleaMUN
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#committees">Committees</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/study-guides2026/" target="_blank">Study Guides</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/venues2026/" target="_blank">Venues</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/people2026/" target="_blank">The People</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/study-guides2026/" target="_blank" rel="noopener">Study Guides</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/venues2026/" target="_blank" rel="noopener">Venues</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/people2026/" target="_blank" rel="noopener">The People</a></li>
           <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pyleamun.github.io/message-wall2026/" target="_blank" rel="noopener">Message Wall</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <h1 class="display-4">Welcome to PyleaMUN 2026</h1>
       <div class="date-highlight">January 22nd &ndash; 24th 2026</div>
-      <!-- Moved buttons directly below the date -->
-      <div class="mt-3">
-        <a href="https://pyleamun.github.io/registration2026/" class="btn btn-primary btn-lg">Register Now</a>
-        <a href="https://pyleamun.github.io/message-wall2026/" class="btn btn-primary btn-lg ms-3">Message Wall</a>
-        <a href="https://pyleamun.github.io/countries2026/" target="_blank" class="btn btn-primary btn-lg ms-3">
-  Country Availability
-</a>
-
-      </div>
+      <br>
+      <a href="https://pyleamun.github.io/registration2026/" target="_blank" class="btn btn-primary btn-lg">Register Now</a>
+      <a href="https://pyleamun.github.io/message-wall2026/" target="_blank" class="btn btn-primary btn-lg ms-3">Message Wall</a>
+      <a href="https://pyleamun.github.io/countries2026/" target="_blank" class="btn btn-primary btn-lg ms-3">Country Availability</a>
       <div id="countdown" class="mt-4 fs-4 fw-bold text-primary"></div>
     </div>
   </header>
 
-  <!-- Countdown -->
+  <!-- Countdown Section -->
   <section id="countdown-section" class="py-5 text-center bg-light">
-    <div class="container">...
-    <!-- remains unchanged -->
+    <div class="container">
+      <h2 class="mb-4 text-primary fw-bold">Countdown to PyleaMUN 2026</h2>
+      <div id="countdown" class="d-flex justify-content-center flex-wrap gap-4 fs-3 fw-semibold">
+        <div><span id="days">--</span><div class="small">Days</div></div>
+        <div><span id="hours">--</span><div class="small">Hours</div></div>
+        <div><span id="minutes">--</span><div class="small">Minutes</div></div>
+        <div><span id="seconds">--</span><div class="small">Seconds</div></div>
+      </div>
+    </div>
   </section>
 
-  <!-- Committees -->
+  <section id="empowering" class="container py-5">
+    <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
+    <div class="mt-4">
+      <p>Thessaloniki &mdash; ancient crossroads of ideas and empires &mdash; beckons the next wave of young diplomats to ignite bold solutions, fuse tradition with technology, and chart a resilient future.</p>
+      <ul class="list-unstyled text-center">
+        <li>🌟 <strong>Why Here?</strong> From the White Tower to the waterfront, history's lessons fuel your vision.</li>
+        <li>⚡ <strong>Why Now?</strong> As tomorrow's leaders, you hold the keys to communities, climate and digital frontiers.</li>
+        <li>🎯 <strong>Your Mission:</strong> Unite, debate, draft &mdash; and leave a legacy that generations will follow.</li>
+      </ul>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAgenda">Agenda</button>
+      <button class="btn btn-primary btn-lg ms-3" data-bs-toggle="modal" data-bs-target="#modalAbout">About PyleaMUN</button>
+    </div>
+  </section>
+
+  <!-- Committees Section -->
   <section id="committees" class="container py-5">
     <h2 class="section-title">Committees</h2>
     <div class="row g-4">
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">UN Environment Programme</h5><a href="https://pyleamun.github.io/unep2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">Security Council</h5><a href="https://pyleamun.github.io/security2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">Economic and Social Council</h5><a href="https://pyleamun.github.io/ecosoc2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">NATO</h5><a href="https://pyleamun.github.io/nato2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">World Health Organisation</h5><a href="https://pyleamun.github.io/who2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">Human Rights Council</h5><a href="https://pyleamun.github.io/hrc2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">UNESCO</h5><a href="https://pyleamun.github.io/unesco2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">UN Women</h5><a href="https://pyleamun.github.io/un-women2026/" class="stretched-link"></a></div></div></div>
-      <div class="col-md-4"><div class="card committee-card h-100"><div class="card-body d-flex align-items-center justify-content-center position-relative"><h5 class="card-title">General Assembly Plenary</h5><a href="https://pyleamun.github.io/ga2026/" class="stretched-link"></a></div></div></div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">UN Environment Programme</h5>
+            <a href="https://pyleamun.github.io/unep2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Security Council</h5>
+            <a href="https://pyleamun.github.io/security2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Economic and Social Council</h5>
+            <a href="https://pyleamun.github.io/ecosoc2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">NATO</h5>
+            <a href="https://pyleamun.github.io/nato2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">World Health Organisation</h5>
+            <a href="https://pyleamun.github.io/who2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">Human Rights Council</h5>
+            <a href="https://pyleamun.github.io/hrc2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">UNESCO</h5>
+            <a href="https://pyleamun.github.io/unesco2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">UN Women</h5>
+            <a href="https://pyleamun.github.io/un-women2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card committee-card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center position-relative">
+            <h5 class="card-title text-center">General Assembly Plenary</h5>
+            <a href="https://pyleamun.github.io/ga2026/" class="stretched-link" target="_blank"></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Rules of Procedure Button -->
+  <section class="text-center mb-3">
+    <a href="https://pyleamun.github.io/procedure2026/" target="_blank" class="btn btn-primary btn-lg">
+      Rules of Procedure
+    </a>
+  </section>
+
+  <!-- Study Guides Button -->
+  <section class="text-center mb-3">
+    <a href="https://pyleamun.github.io/study-guides2026/" target="_blank" class="btn btn-primary btn-lg">Study Guides</a>
+  </section>
+
+  <!-- Venues Button -->
+  <section id="venues" class="text-center mb-3">
+    <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
+  </section>
+
+  <!-- The People Button -->
+  <section class="text-center mb-5">
+    <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
+  </section>
+
+  <!-- About PyleaMUN Modal -->
+  <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="labelAbout" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelAbout">About PyleaMUN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body about-text">
+          <p>PyleaMUN is excited to host its very first conference, laying the foundation for what we hope will become a meaningful tradition within the Model United Nations community in Greece and beyond. This initial gathering brings together students and young thinkers who are eager to explore diplomacy, global issues, and the power of collaboration.</p>
+          <p>Throughout the event, participants will engage in thoughtful discussions on pressing challenges — from climate and health to peace and human rights — while developing their critical thinking and public speaking skills in a supportive setting.</p>
+          <p>At its core, PyleaMUN encourages the values of cooperation, respect, and open dialogue — the same values that guide the United Nations. Delegates will have the chance to meet peers from diverse backgrounds, share perspectives, and gain a deeper understanding of global affairs.</p>
+          <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions, to build consensus among divergent viewpoints, and to embody the highest standards of diplomatic conduct.</p>
+          <p>Looking ahead, we hope this conference will inspire continued interest in international issues, respectful dialogue, and student-led initiatives. Our aim is for PyleaMUN to grow into a welcoming space for learning, debate, and collaboration in the years to come.</p>
+          <p>Together, we embark on a journey not merely of debate, but of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agenda Modal -->
+  <div class="modal fade" id="modalAgenda" tabindex="-1" aria-labelledby="labelAgenda" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelAgenda">Committee Agendas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><strong>UN Environment Programme (UNEP)</strong><br>
+              Balancing Ecotourism and Conservation in UNESCO Heritage Sites – Designing sustainable tourism models that preserve cultural landmarks while fueling local economies.
+            </li>
+            <li><strong>Security Council</strong><br>
+              Combatting Illicit Small Arms Trade – Developing international frameworks for awareness campaigns, policy proposals, and community outreach to curb the flow of illegal firearms and light weapons.
+            </li>
+            <li><strong>Economic and Social Council (ECOSOC)</strong><br>
+              Sustainable Entrepreneurship: Youth in the Green Economy – Proposing incentives and capacity-building for student-led start-ups in renewable energy, circular design, and low-carbon tech.
+            </li>
+            <li><strong>UNESCO</strong><br>
+              Bridging the Digital Divide in Education – Ensuring equitable access to e-learning and digital tools for students in underserved urban and rural areas.
+            </li>
+            <li><strong>NATO</strong><br>
+              Reassessing NATO's Strategic Autonomy Amid U.S. Unpredictability – Debating the need for European strategic autonomy and defense integration in light of fluctuating U.S. commitments and rhetoric questioning NATO's relevance.
+            </li>
+            <li><strong>World Health Organisation (WHO)</strong><br>
+              Adolescent Mental Health: A Global Crisis – Formulating youth-centered strategies for schools and online platforms to provide early support and destigmatize care.
+            </li>
+            <li><strong>Human Rights Council (HRC)</strong><br>
+              Protecting the Rights of Children and Adolescents in Gaza – Crafting resolutions to ensure that youth in Gaza have access to education, healthcare, and protection from violence despite ongoing hostilities and restrictions on movement.
+            </li>
+            <li><strong>UN Women</strong><br>
+              Preventing Gender-Based Violence – Establishing international guidelines for safe reporting mechanisms and prevention education.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Registration Section -->
   <section id="register" class="container py-5 text-center">
@@ -127,40 +334,41 @@
     <p>Secure your spot at PyleaMUN 2026 by registering today.</p>
     <a href="https://pyleamun.github.io/registration2026/" target="_blank" class="btn btn-success btn-lg">Register Here</a>
   </section>
-<!-- Fees Button Only -->
-<div class="text-center mb-5">
-  <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalFees">Fees</button>
-</div>
 
-<!-- Fees Modal -->
-<div class="modal fade" id="modalFees" tabindex="-1" aria-labelledby="labelFees" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="labelFees">Participation Fees</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body fs-5">
-        <ul class="list-unstyled">
-          <li><strong>Individual Delegate Fee:</strong> 25 Euros</li>
-          <li><strong>School Fee:</strong> No charge</li>
-          <li><strong>Student Officers:</strong> No charge</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <!-- Fees Button Only -->
+  <div class="text-center mb-5">
+    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalFees">Fees</button>
+  </div>
+
+  <!-- Fees Modal -->
+  <div class="modal fade" id="modalFees" tabindex="-1" aria-labelledby="labelFees" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelFees">Participation Fees</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body fs-5">
+          <ul class="list-unstyled">
+            <li><strong>Individual Delegate Fee:</strong> 25 Euros</li>
+            <li><strong>School Fee:</strong> No charge</li>
+            <li><strong>Student Officers:</strong> No charge</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Contact Section -->
   <section id="contact" class="container py-5 text-center">
-  <h2 class="section-title">Contact Us</h2>
-  <p>Questions? Reach out at <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a>.</p>
-  <p>Send registration material to: <a href="mailto:pyleamun.reg@gmail.com">pyleamun.reg@gmail.com</a></p>
-  <p>📞 Phone: <a href="tel:+302310329199">+30 2310 329199</a></p>
-</section>
+    <h2 class="section-title">Contact Us</h2>
+    <p>Questions? Reach out at <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a>.</p>
+    <p>Send registration material to: <a href="mailto:pyleamun.reg@gmail.com">pyleamun.reg@gmail.com</a></p>
+    <p>📞 Phone: <a href="tel:+302310329199">+30 2310 329199</a></p>
+  </section>
 
   <!-- Footer -->
   <footer class="text-center py-4">
