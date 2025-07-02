@@ -29,9 +29,8 @@
         .hero {
             background-image: url('pyleaMUNfinallogo.png');
             background-repeat: no-repeat;
-            background-size: auto 80%;
+            background-size: auto 60%; /* Adjusted background size */
             background-position: center center;
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,10 +43,14 @@
             inset: 0;
             background-color: rgba(248, 248, 240, 0.6);
         }
-        .hero-content { position: relative; z-index:1; max-width:70%; color:#001f3f; padding:2rem; }
+        .hero-content { position: relative; z-index:1; max-width:80%; color:#001f3f; padding:2rem; }
         .hero-content h1 { text-shadow:2px 2px 4px rgba(255,255,255,0.7); }
-        .hero-content .date-highlight { display:inline-block; color:#001f3f; font-size:1.5rem; font-weight:700; padding:0.2em 0.5em; border-radius:0.3em; font-style:italic; margin-bottom:1rem; }
-        .section-title { margin:4rem 0 2rem; text-align:center; color:#001f3f; }
+        .hero-content .date-highlight { display:inline-block; color:#001f3f; font-size:1.25rem; font-weight:700; padding:0.2em 0.5em; border-radius:0.3em; font-style:italic; margin-bottom:1rem; }
+        .section-title { 
+            margin: 2.5rem 0 1.5rem; /* Reduced margins */
+            text-align:center; 
+            color:#001f3f; 
+        }
         .engraved { text-shadow:1px 1px 0 #aaa, -1px -1px 0 #fff; }
         .about-text p { text-align:justify; font-style:italic; line-height:1.6; }
         .committee-card { transition:transform .3s; cursor:pointer; }
@@ -95,14 +98,14 @@
 
         .moving-banner-content {
             display: inline-block;
-            animation: marquee 40s linear infinite;
+            animation: marquee 60s linear infinite; 
         }
 
         .moving-banner-content span {
-            color: #dc3545; /* Red text */
-            font-weight: 700; /* Bolder for readability */
-            font-size: 1.44rem; /* 20% larger font */
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Shadow for contrast */
+            color: #dc3545; 
+            font-weight: 700; 
+            font-size: 1.44rem; 
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); 
             padding-right: 60px;
             vertical-align: middle;
         }
@@ -112,13 +115,48 @@
             to { transform: translateX(-50%); }
         }
         /* --- End Moving Banner CSS --- */
+
+        /* --- Green Banner CSS --- */
+        .green-banner {
+            background-color: #eafaf1; 
+            margin-top: 0;
+        }
+
+        .green-banner .moving-banner-content span {
+            color: #157347; 
+        }
+        /* --- End Green Banner CSS --- */
+
+        /* --- Sky Blue Banner CSS --- */
+        .sky-blue-banner {
+            background-color: #e1f5fe; 
+            margin-top: 0;
+        }
+
+        .sky-blue-banner .moving-banner-content span {
+            color: #0277bd; 
+        }
+        /* --- End Sky Blue Banner CSS --- */
+        
+        /* --- Mobile Specific Adjustments --- */
+        @media (max-width: 768px) {
+            .hero-content h1.display-4 {
+                font-size: 2.5rem; /* Smaller hero title */
+            }
+            .moving-banner-content span {
+                font-size: 1rem; /* Smaller banner text */
+            }
+            .section-title {
+                margin-top: 2rem; /* Tighter section titles on mobile */
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;" onerror="this.style.display='none'">
+                <img src="pyleamun.github.io/pyleaMUNfinallogo1.png" alt="PyleaMUN Logo" class="me-2" style="height:40px;" onerror="this.style.display='none'">
                 PyleaMUN
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -146,8 +184,21 @@
         </div>
     </div>
 
-    <header class="hero">
-        <div class="hero-content">
+    <div class="moving-banner-container green-banner">
+        <div class="moving-banner-content">
+            <span>We are striving for a paperless conference. All certificates will be issued digitally.</span>
+            <span>We are striving for a paperless conference. All certificates will be issued digitally.</span>
+        </div>
+    </div>
+
+    <div class="moving-banner-container sky-blue-banner">
+        <div class="moving-banner-content">
+            <span>Schools Officially Registered: 2nd General High School Sykeon “Philippos”, 1st Middle School of Kifisia Athens, 1st Model Junior High School of Thessaloniki, American Farm School, 16th General Lyceum of Thessaloniki, 6th GEL KALAMARIAS, Middle School of Makrochori.</span>
+            <span>Schools Officially Registered: 2nd General High School Sykeon “Philippos”, 1st Middle School of Kifisia Athens, 1st Model Junior High School of Thessaloniki, American Farm School, 16th General Lyceum of Thessaloniki, 6th GEL KALAMARIAS, Middle School of Makrochori.</span>
+        </div>
+    </div>
+
+    <header class="hero py-5"> <div class="hero-content">
             <h1 class="display-4">Welcome to PyleaMUN 2026</h1>
             <div class="date-highlight">January 22nd &ndash; 24th 2026</div>
             <br>
@@ -156,12 +207,14 @@
                 <a href="https://pyleamun.github.io/countries2026/" target="_blank" class="btn btn-primary btn-lg">Country Availability</a>
                 <a href="https://pyleamun.github.io/message-wall2026/" target="_blank" class="btn btn-primary btn-lg">Message Wall</a>
             </div>
-            <div id="countdown" class="mt-4 fs-4 fw-bold text-primary"></div>
         </div>
     </header>
 
-    <section id="countdown-section" class="py-5 text-center bg-light">
-        <div class="container">
+    <div class="text-center mb-4">
+        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalFees">No Fees!</button>
+    </div>
+
+    <section id="countdown-section" class="pt-4 pb-0 text-center bg-light"> <div class="container">
             <h2 class="mb-4 text-primary fw-bold">Countdown to PyleaMUN 2026</h2>
             <div id="countdown" class="d-flex justify-content-center flex-wrap gap-4 fs-3 fw-semibold">
                 <div><span id="days">--</span><div class="small">Days</div></div>
@@ -172,8 +225,7 @@
         </div>
     </section>
 
-    <section id="empowering" class="container py-5">
-        <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
+    <section id="empowering" class="container py-4"> <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
         <div class="mt-4">
             <p>Thessaloniki &mdash; ancient crossroads of ideas and empires &mdash; beckons the next wave of young diplomats to ignite bold solutions, fuse tradition with technology, and chart a resilient future.</p>
             <ul class="list-unstyled text-center">
@@ -190,8 +242,7 @@
         </div>
     </section>
 
-    <section id="committees" class="container py-5">
-        <h2 class="section-title">Committees</h2>
+    <section id="committees" class="container py-4"> <h2 class="section-title">Committees</h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card committee-card h-100">
@@ -275,26 +326,21 @@
         </div>
     </section>
 
-    <section class="text-center mb-3">
-        <a href="https://pyleamun.github.io/procedure2026/" target="_blank" class="btn btn-primary btn-lg">
+    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/procedure2026/" target="_blank" class="btn btn-primary btn-lg">
             Rules of Procedure
         </a>
     </section>
 
-    <section class="text-center mb-3">
-        <a href="https://pyleamun.github.io/study-guides2026/" target="_blank" class="btn btn-primary btn-lg">Study Guides</a>
+    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/study-guides2026/" target="_blank" class="btn btn-primary btn-lg">Study Guides</a>
     </section>
 
-    <section class="text-center mb-3">
-        <a href="https://pyleamun.github.io/del-manual/" target="_blank" class="btn btn-primary btn-lg">Delegate Manual</a>
+    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/del-manual/" target="_blank" class="btn btn-primary btn-lg">Delegate Manual</a>
     </section>
-    
-    <section id="venues" class="text-center mb-3">
-        <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
+   
+    <section id="venues" class="text-center mb-2"> <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
     </section>
 
-    <section class="text-center mb-5">
-        <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
+    <section class="text-center mb-4"> <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
     </section>
 
     <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="labelAbout" aria-hidden="true">
@@ -363,15 +409,10 @@
         </div>
     </div>
 
-    <section id="register" class="container py-5 text-center">
-        <h2 class="section-title">Registration</h2>
+    <section id="register" class="container py-4 text-center"> <h2 class="section-title">Registration</h2>
         <p>Secure your spot at PyleaMUN 2026 by registering today.</p>
         <a href="https://pyleamun.github.io/registration2026/" target="_blank" class="btn btn-success btn-lg">Register Here</a>
     </section>
-
-    <div class="text-center mb-5">
-        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalFees">No Fees!</button>
-    </div>
 
     <div class="modal fade" id="modalFees" tabindex="-1" aria-labelledby="labelFees" aria-hidden="true">
         <div class="modal-dialog">
@@ -394,8 +435,7 @@
         </div>
     </div>
 
-    <section id="contact" class="container py-5 text-center">
-        <h2 class="section-title">Contact Us</h2>
+    <section id="contact" class="container py-4 text-center"> <h2 class="section-title">Contact Us</h2>
         <p>Questions? Reach out at <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a>.</p>
         <p>Send registration material to: <a href="mailto:pyleamun.reg@gmail.com">pyleamun.reg@gmail.com</a></p>
         <p>📞 Phone: <a href="tel:+302310329199">+30 2310 329199</a></p>
@@ -421,43 +461,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const deadline = new Date('January 22, 2026 08:00:00').getTime();
+        const timerInterval = setInterval(updateCountdown, 1000);
+
         function updateCountdown() {
             const now = Date.now();
             const t = deadline - now;
+            
             if (t <= 0) {
-                // Stop countdown and clear timers if the date is past
-                document.getElementById('countdown-section').innerHTML = "<p class='fs-4 text-success'>The Conference has started!</p>";
-                const heroCountdown = document.querySelector('.hero-content #countdown');
-                if(heroCountdown) {
-                    heroCountdown.innerHTML = '';
-                }
                 clearInterval(timerInterval);
+                const countdownSection = document.getElementById('countdown-section');
+                if (countdownSection) {
+                    countdownSection.innerHTML = "<div class='container py-5'><p class='fs-4 text-success'>The Conference has started!</p></div>";
+                }
                 return;
             }
-            const days = Math.floor(t / (1000*60*60*24));
-            const hours = Math.floor((t % (1000*60*60*24)) / (1000*60*60));
-            const minutes = Math.floor((t % (1000*60*60)) / (1000*60));
-            const seconds = Math.floor((t % (1000*60)) / 1000);
-            
-            // Update the main countdown section
+
+            const days = Math.floor(t / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((t % (1000 * 60)) / 1000);
+
             const daysEl = document.getElementById('days');
             const hoursEl = document.getElementById('hours');
             const minutesEl = document.getElementById('minutes');
             const secondsEl = document.getElementById('seconds');
 
-            if(daysEl) daysEl.textContent = days;
-            if(hoursEl) hoursEl.textContent = hours;
-            if(minutesEl) minutesEl.textContent = minutes;
-            if(secondsEl) secondsEl.textContent = seconds;
-            
-            // Clear the hero countdown placeholder
-            const heroCountdown = document.querySelector('.hero-content #countdown');
-            if(heroCountdown) {
-                 heroCountdown.innerHTML = '';
-            }
+            if (daysEl) daysEl.textContent = days;
+            if (hoursEl) hoursEl.textContent = hours;
+            if (minutesEl) minutesEl.textContent = minutes;
+            if (secondsEl) secondsEl.textContent = seconds;
         }
-        const timerInterval = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Run once immediately
+
+        updateCountdown(); 
     </script>
 </body>
 </html>
