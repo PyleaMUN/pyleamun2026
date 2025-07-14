@@ -146,7 +146,7 @@
             color: #0277bd; 
         }
         /* --- End Sky Blue Banner CSS --- */
-       
+        
         /* --- Mobile Specific Adjustments --- */
         @media (max-width: 768px) {
             .hero {
@@ -164,6 +164,10 @@
             .section-title {
                 margin-top: 2rem; /* Tighter section titles on mobile */
             }
+        }
+        /* Added for justified text in popups */
+        .modal-body ul li {
+            text-align: justify;
         }
     </style>
 </head>
@@ -301,7 +305,6 @@
                 <div class="card committee-card h-100">
                     <div class="card-body d-flex align-items-center justify-content-center position-relative">
                         <h5 class="card-title text-center">UNESCO</h5>
-                        <a href="https://pyleamun.github.io/unesco2026/" class="stretched-link" target="_blank"></a>
                     </div>
                 </div>
             </div>
@@ -309,7 +312,6 @@
                 <div class="card committee-card h-100">
                     <div class="card-body d-flex align-items-center justify-content-center position-relative">
                         <h5 class="card-title text-center">UN Women</h5>
-                        <a href="https://pyleamun.github.io/un-women2026/" class="stretched-link" target="_blank"></a>
                     </div>
                 </div>
             </div>
@@ -321,9 +323,9 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="https://pyleamun.github.io/historical/" target="_blank" class="btn btn-danger btn-lg">Historical Crisis</a>
-            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="https://pyleamun.github.io/historical/" target="_blank" class="btn btn-danger btn-lg">Historical Crisis</a>
         </div>
     </section>
 
@@ -337,7 +339,7 @@
 
     <section class="text-center mb-2"> <a href="https://pyleamun.github.io/del-manual/" target="_blank" class="btn btn-primary btn-lg">Delegate Manual</a>
     </section>
-   
+    
     <section id="venues" class="text-center mb-2"> <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
     </section>
 
@@ -375,6 +377,10 @@
                 </div>
                 <div class="modal-body">
                     <ul>
+                        <li><strong>United Nations General Assembly (UNGA)</strong><br>
+                            At PyleaMUN, delegates from all committees participate in a General Assembly on the last conference day (Saturday 24 January). Delegations will be headed by their respective ambassadors. Within each delegation, there should be only one acting delegate at any given time. This duty can be left entirely to the country’s ambassador or rotated depending on the delegation’s preferences. The country’s placard should be held and raised when required only by the acting delegate (more info will be made available in the Delegate Handbook).<br>
+                            The topic debated by the Assembly is “<strong>Human Rights or Cultural Relativism: Can Universal Norms Truly Exist? Are international human rights genuinely universal, or do they impose Western values on diverse cultures?</strong>” The PyleaMUN Secretariat’s study guide will be published and made available at the same place as the other guides.
+                        </li>
                         <li><strong>UN Environment Programme (UNEP)</strong><br>
                             Balancing Ecotourism and Conservation in UNESCO Heritage Sites – Designing sustainable tourism models that preserve cultural landmarks while fueling local economies.
                         </li>
@@ -399,6 +405,7 @@
                         <li><strong>UN Women</strong><br>
                             Preventing Gender-Based Violence – Establishing international guidelines for safe reporting mechanisms and prevention education.
                         </li>
+                        <li><strong>Historical Crisis Committee (HCC):</strong> to be announced by mid September</li>
                     </ul>
                 </div>
             </div>
@@ -462,7 +469,7 @@
         function updateCountdown() {
             const now = Date.now();
             const t = deadline - now;
-           
+            
             if (t <= 0) {
                 clearInterval(timerInterval);
                 const countdownSection = document.getElementById('countdown-section');
