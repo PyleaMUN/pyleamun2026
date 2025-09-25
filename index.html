@@ -125,6 +125,29 @@
         }
         /* --- End Moving Banner CSS --- */
 
+        /* --- Golden Flashing Banner CSS --- */
+        .golden-flashing-banner {
+            padding: 12px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #212529;
+            animation: flash-animation 1.5s infinite;
+            border-top: 1px solid #c9b037;
+            border-bottom: 1px solid #c9b037;
+        }
+
+        @keyframes flash-animation {
+            0%, 100% {
+                background-color: #ffd700; /* Gold */
+                box-shadow: 0 0 8px #ffd700;
+            }
+            50% {
+                background-color: #ffec80; /* Lighter Gold */
+                box-shadow: 0 0 25px #ffec80;
+            }
+        }
+        /* --- End Golden Flashing Banner CSS --- */
+
         /* --- Green Banner CSS --- */
         .green-banner {
             background-color: #eafaf1; 
@@ -164,6 +187,10 @@
             .section-title {
                 margin-top: 2rem; /* Tighter section titles on mobile */
             }
+            .golden-flashing-banner {
+                font-size: 1rem;
+                padding: 10px 5px;
+            }
         }
         /* Added for justified text in popups */
         .modal-body ul li {
@@ -201,6 +228,10 @@
             <span>Due to the NO PARTICIPATION FEE policy that we have adopted thanks to our generous contributors, there will be a very strict "first come, first served" policy regarding booking a seat at the conference.</span>
             <span>Due to the NO PARTICIPATION FEE policy that we have adopted thanks to our generous contributors, there will be a very strict "first come, first served" policy regarding booking a seat at the conference.</span>
         </div>
+    </div>
+
+    <div class="golden-flashing-banner">
+        Registration for schools will be closing on <strong>Sunday 28-9-25</strong>. Due to very high participation numbers, we regret to inform you that we cannot accept any more applications past that date. Thank you!
     </div>
 
     <header class="hero py-5"> <div class="hero-content">
