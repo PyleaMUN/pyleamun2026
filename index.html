@@ -27,14 +27,12 @@
         body { font-family: 'Roboto', sans-serif; margin: 0; background-color: #f8f8f0; }
         .navbar-custom { background-color: #f8f8f0; }
         
-        /* --- Updated Hero Section for Seamless Blending --- */
         .hero {
             background-color: #f8f8f0; 
             background-image: url('pyleaMUNfinallogo.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
-            /* Changed from 'multiply' to 'darken' for cleaner white removal */
             background-blend-mode: darken; 
             display: flex;
             align-items: center;
@@ -45,15 +43,12 @@
             margin-top: 56px; 
         }
 
-        /* Vignette Effect: Fades edges to solid color, keeping logo visible */
         .hero::before {
             content: "";
             position: absolute;
             inset: 0;
-            /* Radial gradient: Transparent in center -> Solid body color at edges */
             background: radial-gradient(circle at center, rgba(248, 248, 240, 0.6) 0%, rgba(248, 248, 240, 1) 70%);
         }
-        /* ------------------------------------------- */
 
         .hero-content { 
             position: relative; 
@@ -106,7 +101,6 @@
         #countdown span { display: block; font-size: 2rem; color: #007bff; }
         #countdown .small { font-size: 0.9rem; color: #555; }
 
-        /* --- Moving Banner CSS --- */
         .moving-banner-container {
             margin-top: 56px;
             background-color: rgba(32, 201, 151, 0.85);
@@ -133,9 +127,7 @@
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
-        /* --- End Moving Banner CSS --- */
 
-        /* --- Golden Flashing Banner CSS --- */
         .golden-flashing-banner {
             padding: 12px 0;
             text-align: center;
@@ -156,24 +148,20 @@
                 box-shadow: 0 0 25px #ffec80;
             }
         }
-        /* --- End Golden Flashing Banner CSS --- */
         
-        /* --- New Flashing Button Style --- */
         .btn-flash-2027 {
             font-weight: 700;
             color: #001f3f;
             border: 2px solid #c9b037;
             animation: flash-animation 1.5s infinite; 
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             white-space: normal;
         }
         .btn-flash-2027:hover {
             color: #001f3f;
             filter: brightness(1.05);
         }
-        /* --- End New Flashing Button Style --- */
 
-        /* --- Green Banner CSS --- */
         .green-banner {
             background-color: #eafaf1; 
             margin-top: 0;
@@ -182,9 +170,7 @@
         .green-banner .moving-banner-content span {
             color: #157347; 
         }
-        /* --- End Green Banner CSS --- */
 
-        /* --- Sky Blue Banner CSS --- */
         .sky-blue-banner {
             background-color: #e1f5fe; 
             margin-top: 0;
@@ -193,9 +179,7 @@
         .sky-blue-banner .moving-banner-content span {
             color: #0277bd; 
         }
-        /* --- End Sky Blue Banner CSS --- */
         
-        /* --- Mobile Specific Adjustments --- */
         @media (max-width: 768px) {
             .hero {
                 min-height: 40vh; 
@@ -217,7 +201,6 @@
                 padding: 10px 5px;
             }
         }
-        /* Added for justified text in popups */
         .modal-body ul li {
             text-align: justify;
         }
@@ -249,6 +232,10 @@
 
     <header class="hero py-5"> 
         <div class="hero-content">
+            <a href="https://drive.google.com/drive/folders/1wyFsdY_8IbzUzGYoLDx86yxAaY4WbP8-?usp=sharing" class="btn btn-lg btn-flash-2027" target="_blank" rel="noopener">
+                Conference 2026 Newspapers
+            </a>
+            <br>
             <a href="https://pyleamun.github.io/pyleaMUN2027/" class="btn btn-lg btn-flash-2027" target="_blank" rel="noopener">
                 Join us for PyleaMUN 2027
             </a>
@@ -266,7 +253,8 @@
         </div>
     </header>
     
-    <section id="countdown-section" class="pt-4 pb-0 text-center bg-light"> <div class="container">
+    <section id="countdown-section" class="pt-4 pb-0 text-center bg-light"> 
+        <div class="container">
             <h2 class="mb-4 text-primary fw-bold">Countdown to PyleaMUN 2026</h2>
             <div id="countdown" class="d-flex justify-content-center flex-wrap gap-4 fs-3 fw-semibold">
                 <div><span id="days">--</span><div class="small">Days</div></div>
@@ -277,7 +265,8 @@
         </div>
     </section>
 
-    <section id="empowering" class="container py-4"> <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
+    <section id="empowering" class="container py-4"> 
+        <h2 class="section-title text-center engraved">Empowering tomorrow<br><em>Youth-driven innovation for a world that lasts</em></h2>
         <div class="mt-4">
             <p>Thessaloniki &mdash; ancient crossroads of ideas and empires &mdash; beckons the next wave of young diplomats to ignite bold solutions, fuse tradition with technology, and chart a resilient future.</p>
             <ul class="list-unstyled text-center">
@@ -295,7 +284,8 @@
         </div>
     </section>
 
-    <section id="committees" class="container py-4"> <h2 class="section-title">Committees</h2>
+    <section id="committees" class="container py-4"> 
+        <h2 class="section-title">Committees</h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card committee-card h-100">
@@ -379,21 +369,24 @@
         </div>
     </section>
 
-    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/procedure2026/" target="_blank" class="btn btn-primary btn-lg">
-            Rules of Procedure
-        </a>
+    <section class="text-center mb-2"> 
+        <a href="https://pyleamun.github.io/procedure2026/" target="_blank" class="btn btn-primary btn-lg">Rules of Procedure</a>
     </section>
 
-    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/study-guides2026/" target="_blank" class="btn btn-primary btn-lg">Study Guides</a>
+    <section class="text-center mb-2"> 
+        <a href="https://pyleamun.github.io/study-guides2026/" target="_blank" class="btn btn-primary btn-lg">Study Guides</a>
     </section>
 
-    <section class="text-center mb-2"> <a href="https://pyleamun.github.io/del-manual/" target="_blank" class="btn btn-primary btn-lg">Delegate Manual</a>
+    <section class="text-center mb-2"> 
+        <a href="https://pyleamun.github.io/del-manual/" target="_blank" class="btn btn-primary btn-lg">Delegate Manual</a>
     </section>
     
-    <section id="venues" class="text-center mb-2"> <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
+    <section id="venues" class="text-center mb-2"> 
+        <a href="https://pyleamun.github.io/venues2026/" target="_blank" class="btn btn-primary btn-lg">Venues</a>
     </section>
 
-    <section class="text-center mb-4"> <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
+    <section class="text-center mb-4"> 
+        <a href="https://pyleamun.github.io/people2026/" target="_blank" class="btn btn-primary btn-lg">The People</a>
     </section>
 
     <div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="labelAbout" aria-hidden="true">
@@ -404,12 +397,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body about-text">
-                    <p>PyleaMUN is excited to host its very first conference, laying the foundation for what we hope will become a meaningful tradition within the Model United Nations community in Greece and beyond. This initial gathering brings together students and young thinkers who are eager to explore diplomacy, global issues, and the power of collaboration.</p>
-                    <p>Throughout the event, participants will engage in thoughtful discussions on pressing challenges — from climate and health to peace and human rights — while developing their critical thinking and public speaking skills in a supportive setting.</p>
-                    <p>At its core, PyleaMUN encourages the values of cooperation, respect, and open dialogue — the same values that guide the United Nations. Delegates will have the chance to meet peers from diverse backgrounds, share perspectives, and gain a deeper understanding of global affairs.</p>
-                    <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions, to build consensus among divergent viewpoints, and to embody the highest standards of diplomatic conduct.</p>
-                    <p>Looking ahead, we hope this conference will inspire continued interest in international issues, respectful dialogue, and student-led initiatives. Our aim is for PyleaMUN to grow into a welcoming space for learning, debate, and collaboration in the years to come.</p>
-                    <p>Together, we embark on a journey not merely of debate, but of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
+                    <p>PyleaMUN is excited to host its very first conference, laying the foundation for what we hope will become a meaningful tradition within the Model United Nations community in Greece and beyond.</p>
+                    <p>Throughout the event, participants will engage in thoughtful discussions on pressing challenges — from climate and health to peace and human rights — while developing their critical thinking and public speaking skills.</p>
+                    <p>At its core, PyleaMUN encourages the values of cooperation, respect, and open dialogue. Delegates will meet peers from diverse backgrounds and gain a deeper understanding of global affairs.</p>
+                    <p>Guided by a distinguished panel of chairs and expert advisors, our participants will be challenged to craft innovative resolutions and to embody the highest standards of diplomatic conduct.</p>
+                    <p>Looking ahead, we hope this conference will inspire continued interest in international issues. Our aim is for PyleaMUN to grow into a welcoming space for learning and collaboration in the years to come.</p>
+                    <p>Together, we embark on a journey of shared purpose: to empower the leaders of tomorrow to confront global challenges with courage, creativity, and conviction.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -428,41 +421,25 @@
                 <div class="modal-body">
                     <ul>
                         <li><strong>United Nations General Assembly (UNGA)</strong><br>
-                            At PyleaMUN, delegates from all committees participate in a General Assembly on the last conference day (Saturday 24 January). Delegations will be headed by their respective ambassadors. Within each delegation, there should be only one acting delegate at any given time. This duty can be left entirely to the country’s ambassador or rotated depending on the delegation’s preferences. The country’s placard should be held and raised when required only by the acting delegate (more info will be made available in the Delegate Handbook).<br>
-                            The topic debated by the Assembly is “<strong>Human Rights or Cultural Relativism: Can Universal Norms Truly Exist? Are international human rights genuinely universal, or do they impose Western values on diverse cultures?</strong>” The PyleaMUN Secretariat’s study guide will be published and made available at the same place as the other guides.
+                            Delegates participate in a General Assembly on Saturday 24 January. The topic debated is “<strong>Human Rights or Cultural Relativism: Can Universal Norms Truly Exist?</strong>”
                         </li>
-                        <li><strong>UN Environment Programme (UNEP)</strong><br>
-                            Balancing Ecotourism and Conservation in UNESCO Heritage Sites – Designing sustainable tourism models that preserve cultural landmarks while fueling local economies.
-                        </li>
-                        <li><strong>Security Council</strong><br>
-                            Combatting Illicit Small Arms Trade – Developing international frameworks for awareness campaigns, policy proposals, and community outreach to curb the flow of illegal firearms and light weapons.
-                        </li>
-                        <li><strong>Economic and Social Council (ECOSOC)</strong><br>
-                            Sustainable Entrepreneurship: Youth in the Green Economy – Proposing incentives and capacity-building for student-led start-ups in renewable energy, circular design, and low-carbon tech.
-                        </li>
-                        <li><strong>UNESCO</strong><br>
-                            Bridging the Digital Divide in Education – Ensuring equitable access to e-learning and digital tools for students in underserved urban and rural areas.
-                        </li>
-                        <li><strong>NATO</strong><br>
-                            Reassessing NATO's Strategic Autonomy Amid U.S. Unpredictability – Debating the need for European strategic autonomy and defense integration in light of fluctuating U.S. commitments and rhetoric questioning NATO's relevance.
-                        </li>
-                        <li><strong>World Health Organisation (WHO)</strong><br>
-                            Adolescent Mental Health: A Global Crisis – Formulating youth-centered strategies for schools and online platforms to provide early support and destigmatize care.
-                        </li>
-                        <li><strong>Human Rights Council (HRC)</strong><br>
-                            Protecting the Rights of Children and Adolescents in Gaza – Crafting resolutions to ensure that youth in Gaza have access to education, healthcare, and protection from violence despite ongoing hostilities and restrictions on movement.
-                        </li>
-                        <li><strong>UN Women</strong><br>
-                            Preventing Gender-Based Violence – Establishing international guidelines for safe reporting mechanisms and prevention education.
-                        </li>
-                        <li><strong>Historical Crisis Committee (HCC):</strong> The Congress of Corinth, 337 BCE</li>
+                        <li><strong>UN Environment Programme (UNEP)</strong>: Balancing Ecotourism and Conservation in UNESCO Heritage Sites.</li>
+                        <li><strong>Security Council</strong>: Combatting Illicit Small Arms Trade.</li>
+                        <li><strong>Economic and Social Council (ECOSOC)</strong>: Sustainable Entrepreneurship: Youth in the Green Economy.</li>
+                        <li><strong>UNESCO</strong>: Bridging the Digital Divide in Education.</li>
+                        <li><strong>NATO</strong>: Reassessing NATO's Strategic Autonomy Amid U.S. Unpredictability.</li>
+                        <li><strong>World Health Organisation (WHO)</strong>: Adolescent Mental Health: A Global Crisis.</li>
+                        <li><strong>Human Rights Council (HRC)</strong>: Protecting the Rights of Children and Adolescents in Gaza.</li>
+                        <li><strong>UN Women</strong>: Preventing Gender-Based Violence.</li>
+                        <li><strong>Historical Crisis Committee (HCC)</strong>: The Congress of Corinth, 337 BCE.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <section id="register" class="container py-4 text-center"> <h2 class="section-title">Registration</h2>
+    <section id="register" class="container py-4 text-center"> 
+        <h2 class="section-title">Registration</h2>
         <p>Secure your spot at PyleaMUN 2026 by registering today.</p>
         <a href="https://pyleamun.github.io/registration2026/" target="_blank" class="btn btn-success btn-lg">Register Here</a>
     </section>
@@ -476,7 +453,7 @@
                 </div>
                 <div class="modal-body fs-5">
                     <ul class="list-unstyled">
-                        <li><strong>Individual Delegate Fee:</strong> No charge! Thanks to the generosity of the people who embraced our effort, the PyleaMUN Organizing Committee is happy and proud to announce that we are now the only MUN Conference with no Participation Fees for all students!</li>
+                        <li><strong>Individual Delegate Fee:</strong> No charge!</li>
                         <li><strong>School Fee:</strong> No charge</li>
                         <li><strong>Student Officers:</strong> No charge</li>
                     </ul>
@@ -488,7 +465,8 @@
         </div>
     </div>
 
-    <section id="contact" class="container py-4 text-center"> <h2 class="section-title">Contact Us</h2>
+    <section id="contact" class="container py-4 text-center"> 
+        <h2 class="section-title">Contact Us</h2>
         <p>Questions? Reach out at <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a>.</p>
         <p>Send registration material to: <a href="mailto:pyleamun.reg@gmail.com">pyleamun.reg@gmail.com</a></p>
         <p>📞 Phone: <a href="tel:+302310329199">+30 2310 329199</a></p>
